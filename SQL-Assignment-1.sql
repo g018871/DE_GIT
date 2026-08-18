@@ -11,6 +11,8 @@ Phone BIGINT,
 Department VARCHAR(50)
 );
 
+SELECT * FROM STUDENTDB.STUDENTS;
+
 CREATE DATABASE EmployeeDB;
 
 CREATE TABLE EmployeeDB.Employees
@@ -24,6 +26,8 @@ JOBROLE VARCHAR(50),
 SALARY DECIMAL(8,2),
 JOINING_DATE DATE
 );
+
+SELECT * FROM EmployeeDB.Employees;
 
 CREATE DATABASE HospitalDB;
 
@@ -39,6 +43,8 @@ Disease VARCHAR(50),
 AdmissionDate DATE
 );
 
+SELECT * FROM HospitalDB.Patients;
+
 CREATE DATABASE LibraryDB;
 
 CREATE TABLE LibraryDB.Books
@@ -51,6 +57,8 @@ Price decimal(6,2),
 PublishedYear int,
 Quantity INT
 );
+
+SELECT * FROM LibraryDB.Books;
 
 CREATE DATABASE ShoppingDB;
 
@@ -65,6 +73,8 @@ StockQuantity BIGINT,
 ManufacturingDate DATE
 );
 
+SELECT * FROM ShoppingDB.Products;
+
 CREATE DATABASE CollegeDB;
 
 CREATE TABLE CollegeDB.Courses
@@ -76,6 +86,8 @@ Department VARCHAR(30),
 Fees DECIMAL(8,2),
 FacultyName VARCHAR(30)
 );
+
+SELECT * FROM CollegeDB.Courses;
 
 CREATE DATABASE BankDB;
 
@@ -90,6 +102,8 @@ Branch VARCHAR(30),
 OpeningDate DATE
 );
 
+SELECT * FROM BankDB.Accounts;
+
 CREATE DATABASE HotelDB;
 
 CREATE TABLE HotelDB.Rooms
@@ -101,6 +115,8 @@ PricePerDay DECIMAL(8,2),
 Availability CHAR(1),
 FloorNumber INT
 );
+
+SELECT * FROM HotelDB.Rooms;
 
 CREATE DATABASE MovieDB;
 
@@ -115,6 +131,8 @@ ReleaseDate DATE,
 Rating DECIMAL(2,1)
 );
 
+SELECT * FROM MovieDB.Movies;
+
 CREATE DATABASE ECommerceDB;
 
 CREATE TABLE ECommerceDB.Customers
@@ -128,3 +146,5 @@ State VARCHAR(20),
 Country VARCHAR(20),
 RegistrationDate DATE
 );
+
+SELECT * FROM ECommerceDB.Customers;
