@@ -1,0 +1,123 @@
+-- MODIFY COLUMN POSITION
+
+ALTER TABLE StudentDB.Students
+MODIFY Email VARCHAR( 50)
+FIRST;
+
+ALTER TABLE EmployeeDB.Employees
+MODIFY SALARY DECIMAL(8,2)
+AFTER JOBROLE;
+
+ALTER TABLE HospitalDB.Patients
+MODIFY BloodGroup VARCHAR(10)
+FIRST;
+
+ALTER TABLE  LibraryDB.Books
+MODIFY Price decimal(6,2)
+AFTER BookName;
+
+ALTER TABLE ShoppingDB.Products
+MODIFY Brand VARCHAR(30)
+AFTER PRODUCTNAME;
+
+ALTER TABLE CollegeDB.Courses
+MODIFY Fees DECIMAL(8,2)
+AFTER Duration;
+
+-- MODIFY COLUMN - DATATYPE/SIZE
+
+ALTER TABLE STUDENTDB.STUDENTS
+MODIFY COLUMN StudentName VARCHAR(100);
+
+ALTER TABLE EmployeeDB.Employees
+MODIFY COLUMN EmployeeName VARCHAR(100);
+
+ALTER TABLE HospitalDB.Patients 
+MODIFY COLUMN Phone VARCHAR(20);
+
+ALTER TABLE  LibraryDB.Books
+MODIFY COLUMN BookName VARCHAR(150);
+
+ALTER TABLE ShoppingDB.Products
+MODIFY COLUMN Price DECIMAL(10,2);
+
+ALTER TABLE BankDB.Accounts
+MODIFY COLUMN Balance DECIMAL(15,2);
+
+-- MODIFY COLUMN - DATATYPE + POSITION
+
+ALTER TABLE StudentDB.students
+MODIFY COLUMN Email VARCHAR(150)
+AFTER StudentName;
+
+ALTER TABLE EmployeeDB.Employees
+MODIFY COLUMN Department VARCHAR(100)
+AFTER EmployeeName;
+
+ALTER TABLE MovieDB.Movies
+MODIFY COLUMN Rating DECIMAL(3,1)
+AFTER MovieName;
+
+ALTER TABLE HotelDB.Rooms
+MODIFY COLUMN RoomNumber VARCHAR(10)
+FIRST;
+
+-- RENAME COLUMN
+
+ALTER TABLE StudentDB.students
+RENAME COLUMN Phone TO MobileNumber;
+
+ALTER TABLE EmployeeDB.Employees
+RENAME COLUMN JOBROLE TO Designation;
+
+ALTER TABLE  LibraryDB.Books
+RENAME COLUMN BookName TO Title;
+
+ALTER TABLE MovieDB.Movies
+RENAME COLUMN MovieName TO Title;
+
+ALTER TABLE ShoppingDB.Products
+RENAME COLUMN StockQuantity TO Availablestock;
+
+ALTER TABLE ECommerceDB.Customers
+RENAME COLUMN RegistrationDate TO RegisteredDate;
+
+-- ADD COLUMN
+
+ALTER TABLE StudentDB.students
+ADD DateOfBirth DATE;
+
+ALTER TABLE EmployeeDB.Employees
+ADD Email VARCHAR(50);
+
+ALTER TABLE HospitalDB.Patients
+ADD DoctorName varchar(50);
+
+ALTER TABLE ShoppingDB.Products
+ADD Discount varchar(3);
+
+ALTER TABLE MovieDB.Movies
+ADD DirectorName VARCHAR(50);
+
+-- DROP COLUMN
+
+ALTER TABLE StudentDB.students
+DROP COLUMN Gender;
+
+ALTER TABLE EmployeeDB.Employees
+DROP COLUMN DateOfBirth;
+
+ALTER TABLE HotelDB.Rooms
+DROP COLUMN FloorNumber;
+
+-- VIEWING THE TABLES
+SELECT * FROM STUDENTDB.STUDENTS;
+SELECT * FROM EmployeeDB.Employees;
+SELECT * FROM HospitalDB.Patients;
+SELECT * FROM LibraryDB.Books;
+SELECT * FROM ShoppingDB.Products;
+SELECT * FROM CollegeDB.Courses;
+SELECT * FROM BankDB.Accounts;
+SELECT * FROM HotelDB.Rooms;
+SELECT * FROM MovieDB.Movies;
+SELECT * FROM ECommerceDB.Customers;
